@@ -1,0 +1,13 @@
+4) List all queue function operations available for manipulation of data elements in c 
+
+*enqueue(): Adds an element to the rear end of the queue.
+
+*dequeue(): Removes and returns the element from the front end of the queue.
+
+*front(): Returns the element at the front of the queue without removing it.
+
+*rear(): Returns the element at the rear of the queue without removing it.
+
+*isEmpty(): Checks if the queue is empty. Returns true if the queue is empty, else returns false.
+
+*isFull(): Checks if the queue is full. Returns true if the queue is full, else returns false.
