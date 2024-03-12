@@ -58,8 +58,8 @@ Answer : The output for this program will not be fixed.
          We will get different outputs each time when we execute the program.
          4 will be printed four times
          3 will be printed one time
-         2 will be printed two times
-         1 will be printed one time
+         1 will be printed two times
+         2 will be printed one time
 
 ======================================================================================================================
 
