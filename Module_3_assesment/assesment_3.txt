@@ -1,0 +1,65 @@
+1. Which signals are triggered, when the following actions are performed. 
+    1) user press ctrl+C  [Answer : SIGINT (signal number = 2)]
+    2) kill() system call is invoked  [Answer : SIGTERM (signal number = 15)]
+    3) CPU tried to execute an illegal instruction  [Answer : SIGILL (signal number = 4)]
+    4) When the program access the unassigned memory  [Answer : SIGSEGV (signal number = 11)]
+
+======================================================================================================================
+
+2. List the gdb command for the following operations  
+    1) To run the current executable file  [Answer : run]
+    2) To create breakpoints at  [Answer : break <line_number>]
+    3) To resume execution once after breakpoint  [Answer : continue]
+    4) To clear break point created for a function  [Answer : clear <function_name>]
+    5) Print the parameters of the function in the backtrace  [Answer : info args]
+
+======================================================================================================================
+
+3. Guess the output for the following program.
+
+#include<stdio.h>
+#include<unistd.h>
+int main() {
+    if (fork() && (!fork())) {
+        if (fork() || fork()) {
+            fork();
+        }
+    }
+    printf("2 ");
+    return 0;
+}
+
+Answer : 2 will be printed seven times
+
+======================================================================================================================
+
+4. Guess the output for the following program.
+
+#include<stdio.h>
+#include<unistd.h>
+int main() {
+    if (fork()) {
+        if (!fork()) {
+            fork();
+            printf("1 ");
+        }
+        else {
+            printf("2 ");
+        }
+    }
+    else {
+        printf("3 ");
+    }
+    printf("4 ");
+    return 0;
+}
+
+Answer : The output for this program will not be fixed. 
+         We will get different outputs each time when we execute the program.
+         4 will be printed four times
+         3 will be printed one time
+         2 will be printed two times
+         1 will be printed one time
+
+======================================================================================================================
+
