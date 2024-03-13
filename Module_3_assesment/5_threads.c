@@ -1,3 +1,6 @@
+// 5. Create two thread functions to print hello and world separately 
+// and create threads for each and execute them one after other in C
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
