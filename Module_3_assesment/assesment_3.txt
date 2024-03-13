@@ -63,3 +63,48 @@ Answer : The output for this program will not be fixed.
 
 ======================================================================================================================
 
+6. How to avoid Race conditions and deadlocks? 
+
+ANSWER: 
+[To avoid RACE CONDITIONS]
+    we can use synchronization mechanisms like locks and semaphores to coordinate access
+    to shared resources and ensure that only one process can access the resource at a time.
+
+[To avoid DEADLOCK]
+    There are four necessary conditions for deadlock to occur. They are-
+        * Mutual exclusion
+        * No preemption
+        * Hold and wait
+        * Circular wait
+    In order avoid deadlock we can design the system in such a way that atleast one of the
+    necessary conditions for deadlock does not occur.
+
+======================================================================================================================
+
+7. What is the difference between exec and fork ?
+
+FORK:
+* The fork system call is used to create a the child process, as a copy of the parent process.
+* After a successful fork, both the parent and the child processes continue execution from the point of the fork call. 
+* child process and parent process have separate memory spaces and can run independently. 
+* The fork system call returns different values in the parent and child processes, which helps to distinguish between them.
+
+EXEC:
+* The exec system call is used to replace the current process with a new process.  
+* The newly created process replaces the memory space of the previous process.
+
+======================================================================================================================
+
+8. What is the difference between process and threads?
+
+Process:
+* A process is a program in execution. It has its own memory space, which includes data and resources.
+* Processes are isolated from each other and they cannot directly access each other's memory space.
+* Inter-process communication mechanisms such as pipes and shared memory are used for communication between processes.
+* Processes are heavyweight in terms of resource consumption.
+
+Thread:
+* A thread is a lightweight unit of execution within a process. Multiple threads can exist within a single process and they can share same memory space.
+* Threads within the same process can communicate directly with each other through shared memory.
+* Threads share same resources of a process which can lead to synchronization problems.
+* Threads are more efficient in terms of resource consumption as they share resources.
