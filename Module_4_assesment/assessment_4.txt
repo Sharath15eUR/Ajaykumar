@@ -1,0 +1,45 @@
+1) Explain the connection procedure followed in client server communication.
+
+*   Create Sockets: Both client and server will create their sockets. 
+    The server creates a socket with the socket() function.
+
+*   Server Binding: The server binds its socket to a specific address and port using the bind() function. 
+
+*   Listening for Connections: The server socket enters the listening state using the listen() function. 
+    This enables the server to accept incoming connection requests from clients. 
+
+*   Client Socket Creation: The client creates its own socket similarly to the server.
+
+*   Client Connection: The client initiates a connection to the server by using the connect() function. 
+    The client specifies the server's IP address and port number to connect .
+
+*   Server Acceptance: When a client attempts to connect, the server's accept() function is called.
+    After connection, it returns a new socket dedicated to that particular client.
+
+*   Data Transfer: Once the connection is established, both the client and server can exchange data through 
+    their respective sockets using send() and recv() functions.
+
+*   Closing Connections: After the communication is complete, both the client and server should 
+    close their sockets using the close() function. This releases the network resources used for the connection.
+
+=====================================================================================================================
+
+2) What is the use of bind() function in socket programming?
+
+In socket programming, the bind() function is used by servers to associate a specific IP address and port number with a socket. 
+This establishes the server's listening address, enabling it to receive incoming connection requests from clients. 
+bind() ensures that the server listens on the specified network interface and port, preventing conflicts with other processes.
+
+=====================================================================================================================
+
+3) What is Datagram Socket?
+
+A datagram socket is a type of socket used in network communication, operating in a connectionless manner. 
+It sends and receives data packets known as datagrams independently, without establishing a persistent connection. 
+Datagram sockets are implemented using the User Datagram Protocol and are suitable for applications where real-time 
+communication is required, such as streaming media or online gaming.
+
+=====================================================================================================================
+
+
+
